@@ -50,7 +50,6 @@ public class CopyScenePathMenu
         else
         {
             GUIUtility.systemCopyBuffer = path;
-            Debug.Log($"Copied path: {path}");
         }
     }
     private static void CopyMultipleScenePaths()
@@ -76,7 +75,6 @@ public class CopyScenePathMenu
         {
             string result = string.Join("\n", paths);
             GUIUtility.systemCopyBuffer = result;
-            Debug.Log($"Copied {paths.Count} paths to clipboard");
         }
     }
     private static void ShowPathPreview(string[] paths)
@@ -277,7 +275,6 @@ public class CopyScenePathMenu
             if (GUILayout.Button("Copy All to Clipboard"))
             {
                 GUIUtility.systemCopyBuffer = string.Join("\n", editablePaths);
-                Debug.Log($"Copied {editablePaths.Length} paths to clipboard");
                 this.Close();
             }
             GUI.enabled = isDirty;
